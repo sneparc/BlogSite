@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HappyApp</title>
+	</head>
+	<body>
+		<%=yield%>
+		<div style="color:red">
+	    <%=flash[:notice] if flash[:notice] %>
+		<%=flash[:alert] if flash[:alert] %>
+		</div>
+
+
+	</body>
+
+
+	</html>
