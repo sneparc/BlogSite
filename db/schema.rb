@@ -11,11 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821224301) do
+ActiveRecord::Schema.define(version: 20140827000402) do
 
   create_table "posts", force: true do |t|
     t.string  "body"
     t.integer "user_id"
+    t.string  "title"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "email"
+    t.integer  "phone_number"
+    t.datetime "birthday"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

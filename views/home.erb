@@ -1,6 +1,7 @@
 <h1>I'm happy</h1>
 
-<form method="POST"  action="/sign-in">
+
+<form id="post" method="POST"  action="/sign-in">
 	<label for="username">Username</label>
 	<input type="text" name="username">
 	<label for="password">Password</label>
@@ -9,3 +10,13 @@
 
 </form>
 
+<a href="/sign_up">Sign Up </a> 
+<br>
+
+
+<br>
+
+<% current_user.posts.each do |post| %>
+<%=post.body %> by <%=current_user.username %></a>
+<br>
+<% end %>
